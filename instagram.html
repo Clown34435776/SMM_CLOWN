@@ -1,29 +1,53 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Instagram Order</title>
   <style>
     body { background: #111; color: #fff; font-family: Arial; padding: 20px; }
-    form { background: #222; padding: 20px; border-radius: 8px; max-width: 500px; margin: auto; }
-    input, select, button { width: 100%; margin: 10px 0; padding: 10px; }
+    form { max-width: 500px; margin: auto; background: #222; padding: 20px; border-radius: 10px; }
+    label { display: block; margin-top: 15px; }
+    input, select, textarea { width: 100%; padding: 10px; margin-top: 5px; border: none; border-radius: 5px; }
+    button { margin-top: 20px; padding: 10px 20px; background: #444; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+    .more-info { display: none; background: #333; padding: 10px; margin-top: 10px; border-radius: 5px; }
   </style>
 </head>
 <body>
-  <h1>Instagram Order Form</h1>
-  <form method="POST" action="/submit-order">
-    <input type="hidden" name="platform" value="Instagram">
+  <h1>Instagram Order</h1>
+  <form>
+    <label>Category:</label>
+    <input type="text" value="Instagram" disabled>
+
     <label>Service:</label>
     <select name="service">
       <option value="likes">Likes</option>
       <option value="followers">Followers</option>
       <option value="views">Views</option>
     </select>
-    <label>Link:</label>
-    <input type="text" name="link" required>
+
+    <label><input type="checkbox" id="toggleInfo"> Show More Info</label>
+    <div class="more-info" id="moreInfo">
+      <p>Delivery: 0-1h<br>Quality: High<br>Refill: Yes</p>
+    </div>
+
     <label>Quantity:</label>
-    <input type="number" name="quantity" required>
+    <input type="number" name="quantity" placeholder="Enter quantity" required>
+
+    <label>Link:</label>
+    <input type="text" name="link" placeholder="Enter link to post/profile" required>
+
+    <label>Settings:</label>
+    <textarea name="settings" placeholder="Optional settings (target country, speed, etc.)"></textarea>
+
     <button type="submit">Place Order</button>
   </form>
+
+  <script>
+    document.getElementById('toggleInfo').addEventListener('change', function() {
+      const info = document.getElementById('moreInfo');
+      info.style.display = this.checked ? 'block' : 'none';
+    });
+  </script>
 </body>
 </html>
