@@ -3,35 +3,24 @@
 <html>
 <head>
   <title>Clowns-SMM Panel</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body { margin: 0; font-family: Arial; background: #111; color: #fff; display: flex; }
+    .sidebar { width: 200px; background: #1e1e1e; padding-top: 20px; height: 100vh; position: fixed; }
+    .sidebar a { display: block; padding: 14px 20px; color: #ccc; text-decoration: none; }
+    .sidebar a:hover { background: #333; }
+    .content { margin-left: 200px; padding: 20px; flex: 1; }
+  </style>
 </head>
 <body>
   <div class="sidebar">
-    <h2>Menu</h2>
-    <ul>
-      <li><a href="#">Welcome</a></li>
-      <li><a href="#">Order</a></li>
-      <li><a href="#">Orders</a></li>
-      <li><a href="#">Admin Login</a></li>
-    </ul>
+    <a href="welcome.html">Welcome</a>
+    <a href="order.html">Order</a>
+    <a href="voucher.html">Voucher</a>
+    <a href="admin.html">Admin Login</a>
   </div>
   <div class="content">
     <h1>Welcome to Clowns-SMM</h1>
-    <p>Select a platform to start your order:</p>
-    <div class="category-grid">
-      <a href="instagram.html"><button>Instagram</button></a>
-      <a href="tiktok.html"><button>TikTok</button></a>
-      <a href="youtube.html"><button>YouTube</button></a>
-      <a href="facebook.html"><button>Facebook</button></a>
-      <a href="twitter.html"><button>Twitter</button></a>
-      <a href="spotify.html"><button>Spotify</button></a>
-      <a href="kick.html"><button>Kick</button></a>
-      <a href="reddit.html"><button>Reddit</button></a>
-      <a href="snapchat.html"><button>Snapchat</button></a>
-      <a href="soundcloud.html"><button>SoundCloud</button></a>
-      <a href="discord.html"><button>Discord</button></a>
-      <a href="twitch.html"><button>Twitch</button></a>
-    </div>
+    <p>Select an option from the sidebar to get started.</p>
   </div>
 </body>
 </html>
