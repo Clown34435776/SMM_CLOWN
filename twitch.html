@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Twitch Order</title>
+  <style>
+    body { background: #111; color: #fff; font-family: Arial; padding: 20px; }
+    form { background: #222; padding: 20px; border-radius: 8px; max-width: 500px; margin: auto; }
+    input, select, button { width: 100%; margin: 10px 0; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Twitch Order Form</h1>
+  <form method="POST" action="/submit-order">
+    <input type="hidden" name="platform" value="Twitch">
+    <label>Service:</label>
+    <select name="service">
+      <option value="likes">Likes</option>
+      <option value="followers">Followers</option>
+      <option value="views">Views</option>
+    </select>
+    <label>Link:</label>
+    <input type="text" name="link" required>
+    <label>Quantity:</label>
+    <input type="number" name="quantity" required>
+    <button type="submit">Place Order</button>
+  </form>
+</body>
+</html>
